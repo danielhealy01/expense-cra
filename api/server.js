@@ -46,7 +46,8 @@ app.post('/api/postExpense', body('date').isDate(), async (req, res, next) => {
 		desc,
 		price,
 	});
-	res.json(transactionCreate);
+    res.json(transactionCreate);
+
 });
 
 module.exports = app;
