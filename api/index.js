@@ -11,12 +11,11 @@ const URL = process.env.MONGO_URL
 
 app.use(cors());
 app.use(express.json());
-// assuming dont need the url encoded middleware
-// app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({extended: false}))
 
 
-// If get warnings
-// mongoose.set('strictQuery', false);
+// Stops deprecation warnings
+mongoose.set('strictQuery', false);
 
 
 app.get('/', (req, res, next) => {

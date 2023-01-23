@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -9,7 +15,41 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 3vmin);
   color: white;
+  padding: 4% 0;
 }
 
+input {
+  font-size: calc(8px + 3vmin);
+  padding: 5px;
+  margin: 5px;
+  
+  /* below fixes html date input height / text diff*/
+  box-sizing: content-box;
+  min-height: 2rem;
+  vertical-align: middle;
+}
+
+button {
+  font-size: calc(8px + 3vmin);
+  width: max-content;
+  padding: 5px 20px;
+  margin: 5px;
+}
+
+.transactions {
+  min-width: 70%;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  margin-bottom: 15px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
